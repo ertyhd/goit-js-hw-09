@@ -24,9 +24,9 @@ function createPromise(position, delay) {
 
 function forCreatePromise(event) {
   event.preventDefault();
-  step = Number(refs.step.value);
-  delay = Number(refs.delay.value);
-  amount = Number(refs.amount.value);
+  let step = Number(refs.step.value);
+  let delay = Number(refs.delay.value);
+  let amount = Number(refs.amount.value);
   for (let position = 0; position < amount; position += 1) {
     createPromise(position, delay)
       .then(({ position, delay }) => {
